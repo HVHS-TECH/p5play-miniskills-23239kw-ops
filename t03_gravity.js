@@ -9,14 +9,23 @@
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
-
+	world.gravity.y = 5;
+	cnv = new Canvas(1000, 1000);
+	Jcole = new Sprite(250, 200, 200, 500, 'd');
+	Jcole.color = 'brown';
+	Circle1 = new Sprite(200, 500, 200, 'd');
+	Circle1.color = 'brown';
+	jizz= new Sprite(500, 100, 100, 100, 'd');
+	jizz.color = 'red';
+	jizz.rotationSpeed = 10;
+	jizz.vel.x = 0.5;
 }
 	
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
-	
+	background('blue')
 }
 
 /*******************************************************/
