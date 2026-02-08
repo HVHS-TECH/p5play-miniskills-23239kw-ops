@@ -15,10 +15,10 @@ function setup() {
 	Jcole.color = 'brown';
 	Circle1 = new Sprite(200, 500, 200, 'd');
 	Circle1.color = 'brown';
-	jizz= new Sprite(500, 100, 100, 100, 'd');
-	jizz.color = 'red';
-	jizz.rotationSpeed = 10;
-	jizz.vel.x = 0.5;
+	shape= new Sprite(500, 100, 100, 100, 'd');
+	shape.color = 'red';
+	shape.rotationSpeed = 10;
+	shape.vel.x = 0.5;
 }
 	
 /*******************************************************/
