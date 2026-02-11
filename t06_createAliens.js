@@ -6,7 +6,6 @@
 	
 /*******************************************************/
 // setup()
-// alien()
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
@@ -31,19 +30,22 @@ function setup() {
 	Jcole.bounciness = 1;
 	
 	platform_1 = new Sprite(200, 700, 1000, 5, 'k');
-	platform_1.rotation = 3;
+	platform_1.rotation = 10;
 
+	randNumaliensize = random(1, 20);
 
+	for (i = 0; i < 100; i++) {
+    alien = new Sprite(width / 2, height / 2, randNumaliensize, randNumaliensize, 'd');
+    alien.vel.x = random();
+    alien.vel.y = random();
+    alien.bounciness = 0.7;
+    alien.friction = 5;
+	alien.color = 'red';
+    const VELARRAY = [-1, 1];
+    randNum = random(4, 7) * random(VELARRAY);
 
-	randNum = random(-5, 5)
-
-	function alien() {
-		alien1 = new Sprite(random(100,900), random(100,900), random(10,50), 'd');
-		alien1.vel.x = randNum;
-		alien1.vel.y = randNum;
-		alien1.bounciness = randNum;
-		alien1.friction = 3;
 	}
+
 }
 	
 /*******************************************************/
