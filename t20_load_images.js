@@ -9,9 +9,9 @@
 /*******************************************************/
 function preload() {
 
-  imgBG   = loadImage('assets/images/space.jfif');
+  imgBG   = loadImage('../assets/images/space.png');
 
-  imgFace = loadImage('assets/images/Face.png');
+  imgFace = loadImage('../assets/images/Face.png');
 
 }
 
@@ -29,7 +29,7 @@ function setup() {
 	Circle1.color = 'green';
 	Circle1.bounciness = 0.5;
 	Circle1.image = (imgFace);
-	imgFace.resize(50, 50);
+	imgFace.resize(200, 200);
 	
 	platform_1 = new Sprite(200, 700, 1000, 5, 'k');
 	platform_1.rotation = 10;
@@ -57,7 +57,6 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
-	background('white')
 	alienGroup.collides(Circle1, func2Call);
 	function func2Call(_ssss,_Circle1) {
 	_ssss.remove();
