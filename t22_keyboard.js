@@ -88,10 +88,15 @@ function draw() {
 
 	if (mouse.presses()) {
 		
-		goatMilk.moveTo(goatmilk.x, 0, 5);
+		goatMilk.moveTo(goatMilk.x, 0, 5);
 
 	}
 	
+	if (mouse.presses()) {
+		
+		alienGroup.moveTo(mouse.x, mouse.y, 5);
+
+	}
 }
 
 /*******************************************************/
