@@ -9,9 +9,9 @@
 /*******************************************************/
 function preload() {
 
-  imgBG   = loadImage('../assets/images/space.png');
+  imgBG   = loadImage('../assets/images/athlete_16477522_profile.jpg');
 
-  imgFace = loadImage('../assets/images/Face.png');
+  imgFace = loadImage('../assets/images/athlete_16477522_profile.jpg');
 
 }
 
@@ -34,11 +34,12 @@ function setup() {
 	goatMilk = new Sprite(width/2, 200, 50, 200, 'd');
 	goatMilk.color = 'white';
 	goatMilk.friction = 0
+	goatMilk.image = (imgFace);
 
 	platform_1 = new Sprite(200, 700, 1000, 5, 'k');
 	platform_1.rotation = 10;
 
-	randNumaliensize = random(1, 20);
+	randNumaliensize = random(5, 40);
 
 	alienGroup = new Group();
 
@@ -46,7 +47,7 @@ function setup() {
     alien = new Sprite(width / 2, height / 2, randNumaliensize, randNumaliensize, 'd');
     alien.vel.x = random();
     alien.vel.y = random();
-    alien.bounciness = 0.7;
+    alien.bounciness = 1;
     alien.friction = 5;
 	alien.color = 'red';
     const VELARRAY = [-1, 1];
@@ -61,6 +62,9 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
+
+	text("goatMilk", 50, 100);
+
 	alienGroup.collides(Circle1, func2Call);
 	function func2Call(_ssss,_Circle1) {
 	_ssss.remove();
@@ -97,6 +101,7 @@ function draw() {
 		alienGroup.moveTo(mouse.x, mouse.y, 5);
 
 	}
+
 }
 
 /*******************************************************/
