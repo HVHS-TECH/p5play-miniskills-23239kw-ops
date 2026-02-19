@@ -1,7 +1,7 @@
 /*******************************************************/
-// P5.play: t02_move_sprite
-// Move a sprite
-// Written by ???
+// P5.play: t01_create_sprite
+// Create a sprite
+/// Written by ???
 /*******************************************************/
 	
 /*******************************************************/
@@ -10,21 +10,18 @@
 function setup() {
 	console.log("setup: ");
 	cnv = new Canvas(1000, 1000);
-	Jcole = new Sprite(250, 200, 200, 500, 'd');
-	Jcole.color = 'brown';
-	Circle1 = new Sprite(200, 500, 200, 'd');
-	Circle1.color = 'brown';
-	jizz= new Sprite(500, 100, 100, 100, 'd');
-	jizz.color = 'red';
-	jizz.rotationSpeed = 10;
-	jizz.vel.x = 0.5;
+	for (i=0; i<10; i++){
+		block = new Sprite( width/2, i*100 + 50, i*50 + 1, 50, 'd');
+		block.color = 'red';
+	}
 }
+
 	
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
-	background('blue')
+	background('lightBlue')
 }
 
 /*******************************************************/

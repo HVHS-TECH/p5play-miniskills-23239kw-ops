@@ -10,17 +10,24 @@
 function setup() {
 	console.log("setup: ");
 	cnv = new Canvas(1000, 1000);
-	Jcole = new Sprite(250, 200, 200, 500, 'd');
-	Jcole.color = 'brown';
-	Circle1 = new Sprite(200, 500, 200, 'd');
-	Circle1.color = 'brown';
+	for ( i=0; i<10; i++){
+		
+		spriteColor = color(random(255), random(255), random(255))
+
+		for ( u=0; u<10; u++){
+			block = new Sprite( u*100 + 50, i*100 + 50, 50, 50, 'd');
+			block.color = u+10;
+		}
+
+	}
 }
+
 	
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
-	background('blue')
+	background('lightBlue')
 }
 
 /*******************************************************/
